@@ -52,6 +52,8 @@ spec:
               value: {{ .Values.operator.resourcePrefix }}
             - name: ENABLE_ADMISSION_CONTROLLER
               value: {{ .Values.operator.enableAdmissionController | quote }}
+            - name: CLUSTER_TYPE
+              value: {{ .Values.operator.clusterType }}
             - name: NAMESPACE
               valueFrom:
                 fieldRef:
